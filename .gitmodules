@@ -1,0 +1,3 @@
+[submodule "twine"]
+	path = twine
+	url = https://github.com/kh0r/twine-translationfile.git
