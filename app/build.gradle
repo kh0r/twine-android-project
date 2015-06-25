@@ -19,6 +19,14 @@ android {
     }
 }
 
+task generateStrings {
+    String script = 'if hash twine 2>/dev/null; then twine generate-string-file ../twine/strings.txt ./src/main/res/values/generated_strings.xml; fi'
+    exec {
+        executable "sh"
+        args '-c', script
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
